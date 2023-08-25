@@ -110,8 +110,43 @@ public class IfElseStatementTheme {
                 "\nИтоговая сумма с % = " + (depositAmount + accruedInterest) + " руб");
 
         System.out.println("\n\n7 - Определение оценки по предметам:");
-        int history = 59;
-        int programming = 92;
-        
+        int historyPrcent = 59;
+        int programmingPercent = 92;
+        int historyPoint = 0;
+        int programmintPoint = 0;
+        if (historyPrcent <= 60) {
+            historyPoint = 2;
+        } else if ((historyPrcent > 60) && (historyPrcent <= 73)) {
+            historyPoint = 3;
+        } else if ((historyPrcent > 73) && (historyPrcent <= 91)) {
+            historyPoint = 4;
+        } else if (historyPrcent > 91) {
+            historyPoint = 5;
+        }
+        if (programmingPercent <= 60) {
+            programmintPoint = 2;
+        } else if ((programmingPercent > 60) && (programmingPercent <= 73)) {
+            programmintPoint = 3;
+        } else if ((programmingPercent > 73) && (programmingPercent <= 91)) {
+            programmintPoint = 4;
+        } else if (programmingPercent > 91) {
+            programmintPoint = 5;
+        }        
+        System.out.println("Оценка по истории - " + historyPoint +
+                "\nОценка по программированию - " + programmintPoint +
+                "\nСредний балл оценок по предметам - " + ((historyPoint + programmintPoint) / 2) +
+                "\nСредний % по предметам - " + ((historyPrcent + programmingPercent) / 2));
+
+        System.out.println("\n\n8 - Расчет годовой прибыли:");
+        double productSale = 13_000;
+        double rent = 5_000;
+        double costPrice = 9_000;
+        double annualProfit = (productSale - (rent + costPrice)) * 12;
+        System.out.print("Прибыль за год: ");
+        if (annualProfit > 0) {
+            System.out.print("+" + annualProfit + " руб.");
+        } else {
+            System.out.print(annualProfit + " руб.");
+        }
     }
 }
