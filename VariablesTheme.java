@@ -70,16 +70,16 @@ public class VariablesTheme {
         System.out.println(". Новые значения - " + a + " и " + b + ".");
 
         System.out.println("\n6 - Вывод символов и их кодов:");
-        char symb1 = '$';
-        char symb2 = '*';
-        char symb3 = '@';
-        char symb4 = '|';
-        char symb5 = '~';
-        System.out.println((int) symb1 + "    " + symb1 +
-                "\n" + (int) symb2 + "    " + symb2 +
-                "\n" + (int) symb3 + "    " + symb3 +
-                "\n" + (int) symb4 + "   " + symb4 +
-                "\n" + (int) symb5 + "   " + symb5);
+        char dollar = '$';
+        char asterisk = '*';
+        char atSign = '@';
+        char verticalBar = '|';
+        char tilde = '~';
+        System.out.println((int) dollar + "    " + dollar +
+                "\n" + (int) asterisk + "    " + asterisk +
+                "\n" + (int) atSign + "    " + atSign +
+                "\n" + (int) verticalBar + "   " + verticalBar +
+                "\n" + (int) tilde + "   " + tilde);
 
         System.out.println("\n7 - Вывод в консоль ASCII-арт Дюка:");
         char slash = '/';

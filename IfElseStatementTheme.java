@@ -2,8 +2,8 @@ public class IfElseStatementTheme {
     
     public static void main(String[] args) {
         System.out.println("1 - Перевод псевдокода на язык Java:");
-        boolean genderMale = true;
-        if (!genderMale) {
+        boolean maleGender = true;
+        if (!maleGender) {
             System.out.println("Пол - женский");
         } else {
             System.out.println("Пол - мужской");
@@ -41,7 +41,7 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n3 - Проверка числа:");
-        int num = 0;
+        int num = 3;
         if (num == 0) {
             System.out.println("Число равно 0");
         } else {
@@ -72,35 +72,33 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("В числах - " + num1 + " и " + num2 + " одинаковые цифры: ");
             if (num1Hundreds == num2Hundreds) {
-                System.out.println(num1Hundreds + " в разряде - 1");
+                System.out.println(num1Hundreds + " в разряде - 3");
             }
             if (num1Tens == num2Tens) {
                 System.out.println(num1Tens + " в разряде - 2");
             }
             if (num1Ones == num2Ones) {
-                System.out.println(num1Ones + " в разряде - 3");
+                System.out.println(num1Ones + " в разряде - 1");
             }
         }
 
         System.out.println("\n5 - Определение символа по его коду:");
-        char symb = '\u0057';
-        System.out.print("Символ " + symb);
-        if (symb >= 'a' && symb <= 'z') {
+        char symbol = '\u0057';
+        System.out.print("Символ " + symbol);
+        if (symbol >= 'a' && symbol <= 'z') {
             System.out.print(" является маленькой буквой");
-        } else if (symb >= 'W' && symb <= 'Z') {
+        } else if (symbol >= 'W' && symbol <= 'Z') {
             System.out.print(" является большой буквой");
-        } else if (symb >= '0' && symb <= '9') {
+        } else if (symbol >= '0' && symbol <= '9') {
             System.out.print(" является цифрой");
         } else {
             System.out.print(" не буква и не цифра");
         }
 
         System.out.println("\n\n6 - Подсчет суммы вклада и начисленных банком %:");
-        double depositAmount = 301_000;
-        double accruedInterest = 0;
-        if (depositAmount < 100_000) {
-            accruedInterest = depositAmount * .05;
-        } else if (depositAmount >= 100_000 && depositAmount <= 300_000) {
+        double depositAmount = 99_000;
+        double accruedInterest = depositAmount * .05;
+        if (depositAmount >= 100_000 && depositAmount <= 300_000) {
             accruedInterest = depositAmount * .07;
         } else if (depositAmount > 300_000) {
             accruedInterest = depositAmount * .1;
@@ -110,22 +108,18 @@ public class IfElseStatementTheme {
                 "\nИтоговая сумма с % = " + (depositAmount + accruedInterest) + " руб");
 
         System.out.println("\n\n7 - Определение оценки по предметам:");
-        int historyPrcent = 59;
-        int programmingPercent = 92;
-        int historyPoint = 0;
-        int programmintPoint = 0;
-        if (historyPrcent <= 60) {
-            historyPoint = 2;
-        } else if ((historyPrcent > 60) && (historyPrcent <= 73)) {
+        int historyPercent = 59;
+        int historyPoint = 2;
+        if ((historyPercent > 60) && (historyPercent <= 73)) {
             historyPoint = 3;
-        } else if ((historyPrcent > 73) && (historyPrcent <= 91)) {
+        } else if ((historyPercent > 73) && (historyPercent <= 91)) {
             historyPoint = 4;
-        } else if (historyPrcent > 91) {
+        } else if (historyPercent > 91) {
             historyPoint = 5;
         }
-        if (programmingPercent <= 60) {
-            programmintPoint = 2;
-        } else if ((programmingPercent > 60) && (programmingPercent <= 73)) {
+        int programmingPercent = 92;
+        int programmintPoint = 2;
+        if ((programmingPercent > 60) && (programmingPercent <= 73)) {
             programmintPoint = 3;
         } else if ((programmingPercent > 73) && (programmingPercent <= 91)) {
             programmintPoint = 4;
@@ -135,7 +129,7 @@ public class IfElseStatementTheme {
         System.out.println("Оценка по истории - " + historyPoint +
                 "\nОценка по программированию - " + programmintPoint +
                 "\nСредний балл оценок по предметам - " + ((historyPoint + programmintPoint) / 2) +
-                "\nСредний % по предметам - " + ((historyPrcent + programmingPercent) / 2));
+                "\nСредний % по предметам - " + ((historyPercent + programmingPercent) / 2));
 
         System.out.println("\n\n8 - Расчет годовой прибыли:");
         double productSale = 13_000;
