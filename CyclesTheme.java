@@ -39,7 +39,7 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\n3 - Вывод реверсивного числа и суммы его цифр:");
-        int num = 1234;
+        int num = 1_234;
         int sum = 0;
         System.out.print("Сумма цифр числа - ");
         while (num > 0) {
@@ -66,7 +66,7 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\n5 - Проверка количества двоек числа на четность/нечетность:");
-        num = 3242592;
+        num = 3_242_592;
         System.out.print("В " + num);
         int count = 0;
         while (num > 0) {
@@ -125,10 +125,74 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\n8 - Проверка, является ли число палиндромом:");
-        num = 1234321;
-        int numNew = 0;
-        while (num > 0) {
-            
+        num = 1_234_321;
+        int numCopy1 = num;
+        int numCopy2 = num;
+        System.out.print("Число " + numCopy2);
+        int pow = 0;
+        while (num > 1) {
+            int digit = num % 10;
+            num /= 10;
+            pow++;
+        }
+        int newNum = 0;
+        while (numCopy1 > 0) {
+            int digit = numCopy1 % 10;
+            int powNum = 1;
+            for (i = 1; i <= pow; i++) {
+                powNum *= 10;
+            }
+            int tmp = digit * powNum;
+            newNum += tmp;
+            pow--;
+            numCopy1 /= 10;
+        }
+        if (numCopy2 == newNum) {
+            System.out.print(" является палиндромом");
+        } else {
+            System.out.print(" не является палиндромом");
+        }
+
+        System.out.println("\n\n9 - Проверка, является ли число счастливым:");
+        num = 123_341;
+        int sumLeft = 0;
+        int sumReght = 0;
+        System.out.print("Число " + num);
+        int numLeft = num / 1000;
+        while(numLeft > 0) {
+            int digit = numLeft % 10;
+            sumLeft += digit;
+            numLeft /= 10;
+        }
+        int numReight = num % 1000;
+        while(numReight > 0) {
+            int digit = numReight % 10;
+            sumReght += digit;
+            numReight /= 10;
+        }
+        if (sumLeft == sumReght) {
+            System.out.print(" является счастливым");
+        } else {
+            System.out.print(" не является счастливым");
+        }
+        System.out.println(" сумма цифр " + (num / 1000) + " = " + sumLeft +
+                ", а сумма " + (num % 1000) + " = " + sumReght);
+
+        System.out.println("\n\n10 - Отображение таблицы умножения Пифагора:");
+        System.out.println("   Таблица пифагора");
+        for (i = 1; i < 10; i++) {
+            if (i == 1) {
+                System.out.print("  |");
+            } else {
+                System.out.printf("%2d%s", i, "|");
+            }
+            for (int j = 2; j < 10; j++) {
+                System.out.printf("%3d", (i * j));
+            }
+            System.out.println();
+            if (i == 1) {
+                System.out.println("---------------------------");
+            }
         }
     }
 }
