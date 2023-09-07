@@ -126,7 +126,19 @@ public class CyclesTheme {
 
         System.out.println("\n8 - Проверка, является ли число палиндромом:");
         num = 1_234_321;
-
+        System.out.print("Число " + num);
+        int copyNum = num;
+        int reverseNum = 0;
+        while(num > 0) {
+            int digit = num % 10;
+            reverseNum = reverseNum * 10 + digit;
+            num /= 10;
+        }
+        if (copyNum == reverseNum) {
+            System.out.print(" является палиндромом");
+        } else {
+            System.out.print(" не является палиндромом");
+        }
 
         System.out.println("\n\n9 - Проверка, является ли число счастливым:");
         num = 123_321;
