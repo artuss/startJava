@@ -126,7 +126,7 @@ public class CyclesTheme {
 
         System.out.println("\n8 - Проверка, является ли число палиндромом:");
         num = 1_234_321;
-
+        
 
         System.out.println("\n\n9 - Проверка, является ли число счастливым:");
         num = 123_321;
@@ -136,7 +136,7 @@ public class CyclesTheme {
         int sumReght = 0;
         count = 0;
         System.out.print("Число " + num);
-        while(num > 0) {
+        while (num > 0) {
             if (count < 3) {
                 sumReght += (num % 10);
                 count++;
