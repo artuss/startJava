@@ -14,11 +14,11 @@ class Person {
         System.out.println(name + " сидит");
     }
 
-    void running() {
+    void run() {
         System.out.println(name + " бежит");
     }
 
-    void says() {
+    void speak() {
         System.out.println(name + " говорит");
     }
 
