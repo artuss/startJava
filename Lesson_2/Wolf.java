@@ -22,7 +22,7 @@ public class Wolf {
         this.nickname = nickname;
     }
 
-    public  double getWeight() {
+    public double getWeight() {
         return weight;
     }
 
