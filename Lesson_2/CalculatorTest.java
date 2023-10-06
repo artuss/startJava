@@ -17,8 +17,8 @@ public class CalculatorTest {
             calc.calculate();
             do {
                 System.out.print("Хотите продолжить вычисления? [yes/no]: ");
-                userResponse = scanner.next();
-            } while (!(userResponse.equalsIgnoreCase("yes") || userResponse.equalsIgnoreCase("no")));
-        } while (userResponse.equalsIgnoreCase("yes"));
+                userResponse = scanner.next().toLowerCase();
+            } while (!userResponse.equals("yes") && !userResponse.equals("no"));
+        } while (userResponse.equals("yes"));
     }
 }

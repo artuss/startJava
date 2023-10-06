@@ -39,13 +39,12 @@ public class Calculator {
                 }
             default:
                 System.out.println("Введенная мат. операция не поддерживается!");
+                return;
         }
-        if (sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '%' || sign == '^') {
-            if ((b == 0 && sign == '/') || (b == 0 && sign == '%')) {
-                System.out.println("На ноль делить нельзя!");
-            } else {
-                System.out.println(a + " " + sign + " " + b + " = " + result);
-            }
+        if ((b == 0 && sign == '/') || (b == 0 && sign == '%')) {
+            System.out.println("На ноль делить нельзя!");
+        } else {
+            System.out.println(a + " " + sign + " " + b + " = " + result);
         }
     }
 }
