@@ -18,7 +18,7 @@ public class JaegerTest {
                 "Сила: " + jaegerOne.getStrength() + "\n" +
                 "Броня: " + jaegerOne.getArmor() + "\n");
 
-        System.out.println("Дрифт - " + jaegerOne.drift());
+        System.out.println("Дрифт - " + jaegerOne.isDrift());
         jaegerOne.move();
         System.out.println("Сканирование - " + jaegerOne.scanKaiju());
         jaegerOne.useAbility();
@@ -32,7 +32,7 @@ public class JaegerTest {
                 "Сила: " + jaegerTwo.getStrength() + "\n" +
                 "Броня: " + jaegerTwo.getArmor() + "\n");
 
-        System.out.println("Дрифт - " + jaegerTwo.drift());
+        System.out.println("Дрифт - " + jaegerTwo.isDrift());
         jaegerTwo.move();
         System.out.println("Сканирование - " + jaegerTwo.scanKaiju());
         jaegerTwo.useAbility();
